@@ -19,5 +19,20 @@ pipeline {
                 echo 'deploying the app..'
             }
         }
+       
+    }
+    
+    post{
+        always {
+            // will always be executed whether the build fails or not
+        }
+        success {
+            // will always be executed when the build success
+        }
+        
+        failure {
+            // will always be executed when the build fail
+        }
+    
     }
 }
